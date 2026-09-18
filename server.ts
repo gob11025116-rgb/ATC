@@ -13,7 +13,7 @@ const PORT = 3000;
 app.use(express.json({ limit: "25mb" }));
 
 // Persistent Database File Path
-const DATA_DIR = path.join(process.cwd(), "data");
+const DATA_DIR = process.env.VERCEL ? path.join("/tmp", "data") : path.join(process.cwd(), "data");
 const DB_FILE = path.join(DATA_DIR, "database.json");
 
 interface DatabaseStore {
@@ -388,4 +388,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;
