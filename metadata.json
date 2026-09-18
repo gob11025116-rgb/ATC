@@ -1,0 +1,10 @@
+{
+  "name": "ระบบกล่องล็อคเป้า AI อัจฉริยะ (AI Target Lock & Tracking System)",
+  "description": "ระบบตรวจจับใบหน้า ล็อคเป้าติดตามการเคลื่อนไหว ตรวจจับทิศทางการมอง ระบบหันตามอัตโนมัติ เทียบใบหน้าบุคคลเฝ้าระวัง และแจ้งเตือนผ่านมือถือแบบเรียลไทม์",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
